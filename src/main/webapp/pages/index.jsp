@@ -4,7 +4,6 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-
 <html>
 <head>
 <meta charset="utf-8">
@@ -25,7 +24,6 @@
 			<div class="row">
 				<div class="col-md-4">
 					<label for="PlanName">Plan Name:</label>
-
 					<form:select path="PlanName" class="form-control">
 						<form:option value="">-Select-</form:option>
 						<form:options items="${names}" />
@@ -98,7 +96,11 @@
 		</table>
 		
 		<hr />
-		Export: <a href="excel">Excel</a> | <a href="">Pdf</a>
+		<div class="d-flex justify-content-start">
+			<a href="excel" class="btn btn-success me-2">Export to Excel</a>
+			<a href="pdf" class="btn btn-danger">Export to PDF</a>
+		</div>
+		
 	</div>
 
 	<script
